@@ -1,7 +1,7 @@
 ﻿# Личный проект «Девайс»
 
 * Студент: [Sofya Palkina](https://up.htmlacademy.ru/htmlcss/23/user/893941).
-* Наставник: `Анна Пономарёва`.
+* Наставник: [Анна Пономарёва] (https://htmlacademy.ru/profile/id153610).
 
 ---
 
