@@ -3,7 +3,7 @@
 * Студент: [Sofya Palkina](https://up.htmlacademy.ru/htmlcss/23/user/893941).
 * Наставник: [Анна Пономарёва](https://htmlacademy.ru/profile/id153610).
 
-* ---
+ ---
 
 _Не удаляйте и не обращайте внимание на файлы:_<br>
 _`.editorconfig`, `.gitattributes`, `.gitignore`, `Contributing.md`, `Readme.md`._
