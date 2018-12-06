@@ -22,7 +22,7 @@
           <li class="catalog"><a href="catalog.html">Каталог товаров</a>
             <ul class="catalog-list">
               <li class="1"><a href="">Виртуальная реальность</a></li>
-              <li class="1"><a href="">Моноподы для селфи</a></li>
+              <li class="1"><a href="monopodes.html">Моноподы для селфи</a></li>
               <li class="1"><a href="">Экшн-камеры</a></li>
               <li class="2"><a href="">Фитнес-браслеты</a></li>
               <li class="2"><a href="">Умные часы</a></li>
@@ -86,7 +86,7 @@
 
     <section class="modal modal-write-us">
       <h2 class="visually-hidden">Напишите нам</h2>
-      <form>
+      <form method="post" action="https://echo.htmlacademy.ru">
         <p>
           <label for="write-us-name">Ваше имя:</label>
           <input class="text" id="write-us-name" placeholder="Имя Фамилия">
@@ -97,16 +97,19 @@
         </p>
         <p>
           <label for="write-us-letter">Текст письма:</label>
-          <input type="text" class="text" id="write-us-letter" placeholder="В свободной форме">
+          <textarea rows="10" class="text" id="write-us-letter" placeholder="В свободной форме"></textarea>
         </p>
-        <button class="modal-close" type="submit">Закрыть</button>
+        <p>
+          <button type="submit" class="send-button send" value="Отправить">Отправить</button>
+        </p>
       </form>
+      <button class="modal-close" type="submit" aria-label="Закрыть">X</button>
     </section>
 
     <section class="modal modal-map">
       <h2 class="visually-hidden">Карта</h2>
       <img src="img/map-big.png">
-      <button class="modal-close">Закрыть</button>
+      <button class="modal-close" type="submit" value="Закрыть">X</button>
     </section>
   </body>
 </html>
