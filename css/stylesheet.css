@@ -1,0 +1,340 @@
+@font-face {
+    font-family: 'gilroyextrabold';
+    src: url('fonts/gilroy-extrabold-webfont.woff2') format('woff2');
+
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'gilroylight';
+    src: url('fonts/gilroy-light-webfont.woff2') format('woff2');
+
+    font-weight: normal;
+    font-style: normal;
+}
+
+body,
+body .inner-page {
+  margin: 0;
+
+  color: rgba(0, 0, 0, 1);
+  background-color: rgba(255, 255, 255, 1);
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.main-header,
+body .inner-page {
+  background-color: rgba(247, 226, 150, 1);
+  color: rgba(0, 0, 0, 1);
+}
+
+.main-header .logo {
+  font-family: 'gilroyextrabold', Arial, sans-serif;
+  font-size: 48px;
+  line-height: 48px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 1);
+}
+
+.main-header input {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-weight: 300;
+  font size: 15px;
+  line-height: 30px;
+  color: rgba(0, 0, 0, 0.3);
+  background-color: #f7e296;
+  border: none;
+}
+
+.main-header input:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.main-header input:focus {
+  color: rgba(0, 0, 0, 1);
+}
+
+header .user-navigation {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 30px;
+  list-style: none;
+  text-decoration: none;
+}
+
+.user-navigation a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 1);
+}
+.user-navigation .logout a {
+  color: rgba(0, 0, 0, 0.3);
+}
+.top-menu {
+  font-family: 'gilroyextrabold', Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 800;
+  text-transform: uppercase;
+  list-style: none;
+}
+
+.top-menu a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 1);
+}
+
+.catalog-list {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 15px;
+  line-height: 36px;
+  font-weight: 300;
+  list-style: none;
+  text-transform: none;
+}
+
+.main-header .logo:hover,
+.user-navigation a:hover,
+.top-menu a:hover {
+   color: rgba(0, 0, 0, 0.6);
+ }
+
+.main-header .logo:active,
+.user-navigation a:active,
+.top-menu a:active  {
+   color: rgba(0, 0, 0, 0.3);
+}
+
+.about-us h2,
+.contacts h2 {
+  font-family: 'gilroyextrabold', Arial, sans-serif;
+  font-size: 47px;
+  line-height: 48px;
+  font-weight: 800;
+}
+
+.about-us p,
+.contacts p {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 300;
+}
+
+.about-us li {
+  font-family: 'gilroyextrabold', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 40px;
+  font-weight: 800;
+}
+
+.button {
+  font-family: 'gilroyextrabold', Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 1);
+}
+
+.button:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+footer a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 1);
+}
+
+.main-footer .logo {
+  font-family: 'gilroyextrabold', Arial, sans-serif;
+  font-size: 48px;
+  line-height: 48px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: rgba(255, 198, 0, 1);
+}
+
+.main-footer .logo:hover {
+  color: rgba(255, 198, 0, 0.6);
+}
+
+.main-footer .logo:focus {
+  color: rgba(255, 198, 0, 0.3);
+}
+
+.main-footer {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 30px;
+  background-color: #464646;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+footer .footer-user-navigation {
+  background-color: #464646;
+  color: rgba(255, 255, 255, 0.7);
+  list-style: none;
+}
+
+.footer-user-navigation a {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-menu {
+  font-family: 'gilroyextrabold', Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 800;
+  text-transform: uppercase;
+  list-style: none;
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(70, 70, 70, 1);
+}
+
+.footer-menu a:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-user-navigation a:hover {
+  color: rgba(255, 255, 255, 1)
+}
+
+.footer-user-navigation a:active,
+.footer-menu a:active {
+  color: rgba(255, 255, 255, 0.3)
+}
+
+.social {
+  list-style: none;
+  text-align: center;
+}
+
+.modal label {
+  font-family: 'gilroyextrabold', Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 1);
+}
+
+.modal-write-us ::placeholder {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(70, 70, 70, 1);
+}
+
+.modal input,
+.modal textarea {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgba(0, 0, 0, 0.4);
+  background-color: #f2f2f2;
+  border: none;
+}
+
+.modal input:hover,
+.modal textarea:hover {
+  background-color: #eaeaea;
+}
+
+.modal input:focus,
+.modal textarea:focus {
+  color: rgba(0, 0, 0, 1);
+  background-color: #ffffff;
+  border: 2px solid #f7e296;
+}
+
+.modal input:invalid,
+.modal textarea:invalid {
+  background-color: #f6dada;
+}
+
+.send-button {
+  font-family: 'gilroyextrabold', Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+/* Моноподы для селфи */
+
+.page-title {
+  font-family: 'gilroyextrabold', Arial, sans-serif;
+  font-size: 47px;
+  line-height: 48px;
+  font-weight: 800;
+}
+
+.breadcrumps a,
+.breadcrumps li {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.3);
+  list-style: none;
+  text-transform: none;
+}
+
+.breadcrumps a:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.breadcrumps a:active {
+  color: rgba(0, 0, 0, 0.1);
+}
+
+legend {
+  font-family: 'gilroyextrabold', Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 800;
+}
+
+.filters label {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 40px;
+  font-weight: 300;
+}
+
+input[type="checkbox"]:disabled,
+input[type="radio"]:disabled {
+  color: #a6a6a6;
+}
+
+.catalog-list .item {
+  font-family: 'gilroyextrabold', Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 800;
+}
+
+.catalog-item-price {
+  font-family: 'gilroylight', Arial, sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  color: #464646;
+}
+
+.main-footer .logout a {
+  color: rgba(255, 255, 255, 0.3);
+}
