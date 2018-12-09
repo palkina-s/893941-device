@@ -320,11 +320,12 @@ input[type="radio"]:disabled {
   color: #a6a6a6;
 }
 
-.catalog-list .item {
+.catalog-item a {
   font-family: 'gilroyextrabold', Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
   font-weight: 800;
+  color: rgba(0, 0, 0, 1);
 }
 
 .catalog-item-price {
