@@ -3,25 +3,27 @@
   <head>
     <meta charset="utf-8">
     <title>Главная страница</title>
-    <link rel="stylesheet" href="css/stylesheet.css">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&amp;subset=cyrillic">
   </head>
   <body>
     <header class="main-header">
-      <nav>
+      <nav class="wrapper">
       <!-- <img src="img/logo.png" class="logo" width="163" height="34" alt="Логотип магазина Девайс"> -->
         <a><h1 class="main-header logo">Device</h1></a>
-        <form method="post" action="https://echo.htmlacademy.ru">
-          <input class="search" type="search" name="search" placeholder="Поиск по сайту">
-        </form>
         <ul class="user-navigation">
+          <li class="search">
+            <form method="post" action="https://echo.htmlacademy.ru">
+              <input class="search" type="search" name="search" placeholder="Поиск по сайту">
+            </form>
+          </li>
           <li class="login-link"><a href="">Войти</a></li>
           <li class="compare"><a href="">Сравнить</a></li>
           <li class="cart"><a href="">Корзина</a></li>
         </ul>
         <ul class="top-menu">
-          <li class="catalog"><a href="catalog.html">Каталог товаров</a>
+          <li class="top-menu catalog"><a href="catalog.html">Каталог товаров</a>
             <ul class="catalog-list">
               <li class="1"><a href="">Виртуальная реальность</a></li>
               <li class="1"><a href="monopods.html">Моноподы для селфи</a></li>
@@ -31,9 +33,9 @@
               <li class="3"><a href="">Квадрокоптеры</a></li>
             </ul>
           </li>
-          <li><a href="delivery.html">Доставка</a></li>
-          <li><a href="warranty.html">Гарантия</a></li>
-          <li><a href="contacts.html">Контакты</a></li>
+          <li class="top-menu"><a href="delivery.html">Доставка</a></li>
+          <li class="top-menu"><a href="warranty.html">Гарантия</a></li>
+          <li class="top-menu"><a href="contacts.html">Контакты</a></li>
         </ul>
       </nav>
     </header>
@@ -42,11 +44,11 @@
       <!-- Красный блок -->
       <div class="index-column">
         <section class="about-us">
-          <h2>О нас</h2>
-          <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.
+          <h2 class="about-us">О нас</h2>
+          <p class="about-us-description">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.
           Мы можем доставить ваш товар в самые отдаленные точки России!
           DEVICE работает со многими транспортными компаниями:</p>
-          <ul>
+          <ul class="partners">
             <li>Деловые Линии</li>
             <li>Автотрейдинг</li>
             <li>ЖелДорЭкспедиция</li>
@@ -54,8 +56,8 @@
           <a class="button" href="">Подробнее о нас</a>
         </section>
         <section class="contacts">
-          <h2>Контакты</h2>
-          <p>Вы можете забрать товар сами, заехав в наш офис.
+          <h2 class="contacts">Контакты</h2>
+          <p class="contacts-description">Вы можете забрать товар сами, заехав в наш офис.
           Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
           <a class="map" href="map.html"><img src="img/map.jpg" alt="Карта" height="222" width="560"></a>
           <a class="button" href="">Напишите нам</a>
@@ -93,7 +95,7 @@
       <h2 class="visually-hidden">Напишите нам</h2>
       <form class="write-us" method="post" action="https://echo.htmlacademy.ru">
         <p>
-          <label for="write-us-name">Ваше имя:</label>
+          <label for="write-us-name" class="modal">Ваше имя:</label>
           <input type="text" id="write-us-name" name="write-us-name" placeholder="Имя Фамилия">
         </p>
         <p>

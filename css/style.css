@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'gilroyextrabold';
-    src: url('fonts/gilroy-extrabold-webfont.woff2') format('woff2');
+    src: url('../fonts/gilroy-extrabold-webfont.woff2') format('woff2');
 
     font-weight: normal;
     font-style: normal;
@@ -8,7 +8,7 @@
 
 @font-face {
     font-family: 'gilroylight';
-    src: url('fonts/gilroy-light-webfont.woff2') format('woff2');
+    src: url('../fonts/gilroy-light-webfont.woff2') format('woff2');
 
     font-weight: normal;
     font-style: normal;
@@ -29,13 +29,23 @@ a {
 ul {
   list-style: none;
 }
+/*
+.visually-hidden {
+  color: rgba(0, 0, 0, 0);
+  overflow: hidden;
+}*/
 
 .main-header,
 body .inner-page {
-  background-color: rgba(247, 226, 150, 1);
   color: rgba(0, 0, 0, 1);
 }
-
+.wrapper {
+  padding: 0;
+  margin: 0;
+  width: 1160px;
+  background-color: rgba(247, 226, 150, 1);
+  display: flex;
+}
 .main-header .logo {
   font-family: 'gilroyextrabold', Arial, sans-serif;
   font-size: 48px;
@@ -45,7 +55,7 @@ body .inner-page {
   color: rgba(0, 0, 0, 1);
 }
 
-.main-header input {
+.main-header .search {
   font-family: 'Open Sans', Arial, sans-serif;
   font-weight: 300;
   font size: 15px;
@@ -55,28 +65,37 @@ body .inner-page {
   border: none;
 }
 
-.main-header input:hover {
+.main-header .search:hover {
   color: rgba(0, 0, 0, 0.6);
 }
 
-.main-header input:focus {
+.main-header .search:hover::placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.main-header .search:focus {
   color: rgba(0, 0, 0, 1);
 }
 
-header .user-navigation {
+.main-header .user-navigation {
   font-family: 'Open Sans', Arial, sans-serif;
   font-weight: 300;
   font-size: 15px;
   line-height: 30px;
   list-style: none;
   text-decoration: none;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .user-navigation a {
   text-decoration: none;
   color: rgba(0, 0, 0, 1);
 }
-.user-navigation .logout a {
+.header-logout a {
   color: rgba(0, 0, 0, 0.3);
 }
 .top-menu {
@@ -114,23 +133,23 @@ header .user-navigation {
    color: rgba(0, 0, 0, 0.3);
 }
 
-.about-us h2,
-.contacts h2 {
+.about-us,
+.contacts {
   font-family: 'gilroyextrabold', Arial, sans-serif;
   font-size: 47px;
   line-height: 48px;
   font-weight: 800;
 }
 
-.about-us p,
-.contacts p {
+.about-us-description,
+.contacts-description {
   font-family: 'Open Sans', Arial, sans-serif;
   font-size: 15px;
   line-height: 30px;
   font-weight: 300;
 }
 
-.about-us li {
+.about-us .partners {
   font-family: 'gilroyextrabold', Arial, sans-serif;
   font-size: 16px;
   line-height: 40px;
@@ -150,7 +169,7 @@ header .user-navigation {
   color: rgba(0, 0, 0, 0.3);
 }
 
-footer a {
+.main-footer a {
   text-decoration: none;
   color: rgba(255, 255, 255, 1);
 }
@@ -168,7 +187,7 @@ footer a {
   color: rgba(255, 198, 0, 0.6);
 }
 
-.main-footer .logo:focus {
+.main-footer .logo:active {
   color: rgba(255, 198, 0, 0.3);
 }
 
@@ -181,7 +200,7 @@ footer a {
   color: rgba(255, 255, 255, 0.7);
 }
 
-footer .footer-user-navigation {
+.main-footer .footer-user-navigation {
   background-color: #464646;
   color: rgba(255, 255, 255, 0.7);
   list-style: none;
@@ -220,7 +239,7 @@ footer .footer-user-navigation {
   text-align: center;
 }
 
-.modal label {
+.modal {
   font-family: 'gilroyextrabold', Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
@@ -229,7 +248,7 @@ footer .footer-user-navigation {
   color: rgba(0, 0, 0, 1);
 }
 
-.modal-write-us ::placeholder {
+.modal-write-us::placeholder {
   font-family: 'Open Sans', Arial, sans-serif;
   font-weight: 300;
   font-size: 14px;
@@ -237,8 +256,8 @@ footer .footer-user-navigation {
   color: rgba(70, 70, 70, 1);
 }
 
-.modal input,
-.modal textarea {
+.modal ,
+.modal .text {
   font-family: 'Open Sans', Arial, sans-serif;
   font-weight: 300;
   font-size: 14px;
@@ -249,7 +268,7 @@ footer .footer-user-navigation {
 }
 
 .modal input:hover,
-.modal textarea:hover {
+.modal .text:hover {
   background-color: #eaeaea;
 }
 
@@ -336,6 +355,6 @@ input[type="radio"]:disabled {
   color: #464646;
 }
 
-.main-footer .logout a {
+.footer-logout a {
   color: rgba(255, 255, 255, 0.3);
 }
