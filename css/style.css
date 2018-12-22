@@ -87,14 +87,24 @@ img {
   padding: 0;
   margin-top: 22px;
   margin-left: 60px;
+  width: 163px;
+  height: 36px;
 
-  font-family: 'gilroyextrabold', Arial, sans-serif;
-  font-size: 48px;
-  line-height: 48px;
-  font-weight: 800;
-  text-transform: uppercase;
-  color: rgba(0, 0, 0, 1);
+  background-image: url('../img/logo.png');
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
 
+.logo:hover {
+  background-image: url('../img/logo-hover.png');
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+.logo:active {
+  background-image: url('../img/logo-down.png');
+  background-position: 0 0;
+  background-repeat: no-repeat;
 }
 
 .user-navigation {
@@ -353,7 +363,7 @@ img {
 
 .index-column {
   width: 1160px;
-  margin: 80px 140px;
+  margin: 100px 140px;
   padding: 0;
 
   display: flex;
@@ -367,6 +377,7 @@ img {
   line-height: 48px;
   font-weight: 800;
   padding: 0;
+  margin-top: 50px;
   margin-bottom: 60px;
 }
 
@@ -375,12 +386,14 @@ img {
   content: "";
   width: 80px;
   height: 7px;
-  margin-bottom: 0;
+  margin: 0;
+  padding: 0;
   background-color: #000000;
 }
 
 .about-us {
   width: 480px;
+  margin: 0;
   padding: 0;
 
   display: flex;
@@ -390,16 +403,20 @@ img {
 
 .contacts {
   width: 565px;
+  padding: 0;
+  margin: 0;
 
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .about-us-description,
 .contacts-description {
+  display: inline-block;
   padding: 0;
   margin: 0;
+
   font-family: 'Open Sans', Arial, sans-serif;
   font-size: 15px;
   line-height: 30px;
@@ -446,7 +463,7 @@ img {
 .index-column .button {
   display: inline-block;
   padding: 15px 20px;
-  margin-top: 85px;
+  margin-top: 60px;
   width: 260px; /* min-width? */
   text-align: center;
 
@@ -469,14 +486,23 @@ img {
 .index-column .button:active {
   color: rgba(0, 0, 0, 0.3);
 }
+.map img {
+  margin-bottom: 32px;
+}
 
 /* Модальные окна */
 
 .modal-write-us {
-  /*position: fixed;
+  display: none;
+
+  position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);*/
+  transform: translate(-50%, -50%);
+}
+
+.modal-show {
+  display: block;
 }
 
 .write-us {
@@ -558,13 +584,18 @@ img {
   margin: 0;
 }
 
-.text::placeholder,
-.email::placeholder {
+.text,
+.email {
   font-family: 'Open Sans', Arial, sans-serif;
   font-weight: 300;
   font-size: 14px;
   line-height: 18px;
-  color: rgba(70, 70, 70, 1);
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.text:focus,
+.email:focus {
+  color: rgba(0, 0, 0, 1);
 }
 
 .modal .text[type="text"]:hover,
@@ -637,9 +668,6 @@ img {
   padding: 0;
   margin: 0;
   font-size: 0;
-  /*background-image: url('../img/modal-close.svg');
-  background-repeat: no-repeat;
-  background-color: transparent;*/
   opacity: 0.6;
   border: none;
   outline-style: none;
@@ -745,6 +773,7 @@ img {
   padding: 0;
   margin: 0;
 
+  width: 468px;
   margin-right: 67px;
   padding-left: 200px;
   padding-top: 140px;
@@ -778,6 +807,11 @@ img {
   margin: 0;
 }
 
+.filters-list {
+  padding: 20px 0 30px 0;
+  margin: 0;
+}
+
 .color-option {
   display: block;
   position: relative;
@@ -793,6 +827,8 @@ img {
   line-height: 40px;
   font-weight: 300;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .checkbox[type="checkbox"]:disabled ~ .color-option,
@@ -800,26 +836,19 @@ img {
   color: #a6a6a6;
 }
 
-.radio::before {
-  content: "";
 
-}
 
-.inner-page .filter-button[type="submit"] {
+.inner-page .button[type="submit"] {
   padding: 0;
   background-color: transparent;
   outline-style: none;
   box-shadow: none;
-}
 
-.inner-page .button {
   display: inline-block;
   padding: 15px 0;
   margin-right: 66px;
-  margin-left: 10px;
   margin-top: 0;
   width: 200px; /* min-width?*/
-  text-align: center;
 
   font-family: 'gilroyextrabold', Arial, sans-serif;
   font-size: 18px;
@@ -829,7 +858,6 @@ img {
   letter-spacing: 4px;
   color: #000000;
   border: none;
-
 
   text-decoration: none;
   background-image: linear-gradient(#eeeeee 23px, #f0c52e 23px, #f0c52e 30px, #eeeeee 30px);
@@ -869,14 +897,6 @@ img {
   color: rgba(0, 0, 0, 1);
 }
 
-.catalog-item {
-  display: flex;
-  flex-wrap: wrap;
-  width: 360px;
-  padding: 0;
-  margin: 0;
-}
-
 .catalog-item-photo {
   order: -1;
   padding: 0;
@@ -889,12 +909,96 @@ img {
   margin-right: 40px;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+
+  position: relative;
+}
+
+.catalog-item .item-menu {
+  display: none;
+  width: 360px;
+  height: 380px;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.to-cart[type="button"] {
+  position: absolute;
+  top: 175px;
+  left: 80px;
+  background-color: transparent;
+  outline-style: none;
+  box-shadow: none;
+  border: none;
+
+  display: block;
+  width: 200px; /* min-width? */
+  height: 40px;
+  text-align: center;
+
+  font-family: 'gilroyextrabold', Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: rgba(0, 0, 0, 1);
+
+  text-decoration: none;
+  background-image: linear-gradient(transparent 16px, #f0c52e 16px, #f0c52e 24px, transparent 24px);
+
+  cursor: pointer;
+}
+
+.to-cart[type="button"]:hover {
+  background-image: linear-gradient(#f0c52e 0px, #f0c52e 30px);
+}
+
+.to-cart[type="button"]:active {
+  background-image: linear-gradient(#f0c52e 0px, #f0c52e 30px);
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.to-compare {
+  display: block;
+  background-color: transparent;
+  outline-style: none;
+  box-shadow: none;
+  border: none;
+
+  position: absolute;
+  left: 100px;
+  bottom: 135px;
+
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 13px;
+  line-height: 36px;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.5);
+
+  cursor: pointer;
+}
+
+.to-compare:hover {
+  color: rgba(0, 0, 0, 1);
+}
+
+.to-compare:active {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.catalog-item-photo:hover ~ .item-menu {
+  display: block;
 }
 
 .item-name {
   display: flex;
-  width: 250px;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
 }
@@ -906,10 +1010,9 @@ img {
   line-height: 24px;
   color: #464646;
 
-  display: flex;
+  display: block;
   margin: 0;
   padding: 0;
-  width: 80px;
 }
 
 /* Подвал */
