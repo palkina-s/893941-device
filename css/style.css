@@ -14,6 +14,13 @@
     font-style: normal;
 }
 
+@keyframes bounce {
+  0% { transform: translateY(-1000px); }
+  70% { transform: translateY(30px); }
+  90% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
 body,
 body .inner-page {
   margin: 0;
@@ -26,10 +33,10 @@ body .inner-page {
 a {
   text-decoration: none;
 }
-/*
+
 ul {
   list-style: none;
-} */
+}
 
 img {
   max-width: 100%;
@@ -1142,15 +1149,6 @@ img {
 
 .modal-write-us {
   display: none;
-
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.modal-show {
-  display: block;
 }
 
 .write-us {
@@ -1195,7 +1193,8 @@ img {
 }
 
 .text,
-.email {
+.email,
+.textarea {
   border: none;
   background-color: #f2f2f2;
   font-family: 'Open Sans', Arial, sans-serif;
@@ -1213,7 +1212,7 @@ img {
   outline-style: none;
 }
 
-.section-write-us-letter .text {
+.section-write-us-letter .textarea {
   width: 720px;
   height: 115px;
   resize: none;
@@ -1233,7 +1232,8 @@ img {
 }
 
 .text,
-.email {
+.email,
+.textarea {
   font-family: 'Open Sans', Arial, sans-serif;
   font-weight: 300;
   font-size: 14px;
@@ -1242,19 +1242,20 @@ img {
 }
 
 .text:focus,
-.email:focus {
+.email:focus,
+.textarea:focus {
   color: rgba(0, 0, 0, 1);
 }
 
 .modal .text[type="text"]:hover,
 .modal .email[type="email"]:hover,
-.modal .text:hover {
+.modal .textarea:hover {
   background-color: #eaeaea;
 }
 
 .modal .text[type="text"]:focus,
 .modal .email[type="email"]:focus,
-.modal .text:focus {
+.modal .textarea:focus {
   color: rgba(0, 0, 0, 1);
   background-color: #ffffff;
   outline: 2px solid #f7e296;
@@ -1263,6 +1264,7 @@ img {
 .modal .email[type="email"]:invalid {
   background-color: #f6dada;
 }
+
 
 .send-button[type="submit"] {
   padding: 0;
@@ -1304,13 +1306,23 @@ img {
   display: none;
   height: 560px;
   width: 960px;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
-.modal-close {
+.modal-show {
+  display: block;
+  animation-name: bounce;
+  animation-duration: 0.5s;
+  position: fixed;
+  top: 10%;
+  left: 17%;
+}
+
+.modal-invalid {
+  outline: 2px solid rgba(255, 0, 0, 0.6);
+}
+
+.modal-close,
+.map-modal-close {
   width: 55px;
   height: 55px;
   padding: 0;
@@ -1319,26 +1331,29 @@ img {
   opacity: 0.6;
   border: none;
   outline-style: none;
+  background-color: transparent;
 
   position: absolute;
 
   cursor: pointer;
 }
 
-.modal-close:hover {
+.modal-close:hover,
+.map-modal-close:hover {
   opacity: 1;
 }
 
-.modal-close:active {
+.modal-close:active,
+.map-modal-close:active {
   opacity: 0.3;
 }
 
 .modal-write-us .modal-close {
-  right: 22px;
-  top: 22px;
+  right: 12px;
+  top: 12px;
 }
 
-.modal-map .modal-close {
-  right: 32px;
-  top: 22px;
+.map-modal-close {
+  right: 17px;
+  top: 12px;
 }

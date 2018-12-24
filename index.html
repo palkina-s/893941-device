@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Главная страница</title>
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&amp;subset=cyrillic">
   </head>
   <body>
@@ -97,7 +97,7 @@
           <p class="contacts-description">Вы можете забрать товар сами, заехав в наш офис.
           Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
           <a class="map" href="map.html">
-            <img src="img/map.jpg" alt="Карта" height="222" width="560">
+            <img class="map" src="img/map.jpg" alt="Карта" height="222" width="560">
           </a>
           <a class="write-us-button button" href="#">Напишите нам</a>
         </section>
@@ -193,23 +193,26 @@
         </p>
         <p class="section-write-us-letter">
           <label for="write-us-letter" class="modal-label">Текст письма:</label>
-          <textarea rows="10" class="text" id="write-us-letter" name="write-us-letter" placeholder="В свободной форме"></textarea>
+          <textarea rows="10" class="textarea" id="write-us-letter" name="write-us-letter" placeholder="В свободной форме"></textarea>
         </p>
         <input type="submit" id="submit" name="submit" class="send-button button" value="Отправить">
       </form>
-      <button class="modal-close" type="button">Закрыть</button>
-      <svg class="modal-close" xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 55 55">
-        <path fill="#F0C52E" d="M27.5 0C12.312 0 0 12.312 0 27.5S12.312 55 27.5 55 55 42.688 55 27.5 42.688 0 27.5 0zm11.476 37.072l-1.486 1.426-9.99-9.574-9.987 9.574-1.488-1.426 9.988-9.573-9.987-9.573 1.487-1.425 9.987 9.573 9.988-9.573 1.487 1.425-9.989 9.574 9.99 9.572z"/>
-      </svg>
+      <button class="modal-close" type="button">Закрыть
+        <svg class="modal-close" xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 55 55">
+          <path fill="#F0C52E" d="M27.5 0C12.312 0 0 12.312 0 27.5S12.312 55 27.5 55 55 42.688 55 27.5 42.688 0 27.5 0zm11.476 37.072l-1.486 1.426-9.99-9.574-9.987 9.574-1.488-1.426 9.988-9.573-9.987-9.573 1.487-1.425 9.987 9.573 9.988-9.573 1.487 1.425-9.989 9.574 9.99 9.572z"/>
+        </svg>
+      </button>
     </section>
 
     <section class="modal modal-map">
       <h2 class="visually-hidden">Карта</h2>
       <img src="img/map-big.png" width="960" height="562">
-      <button class="modal-close" type="button">Закрыть</button>
-      <svg class="modal-close" xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 55 55">
-        <path fill="#F0C52E" d="M27.5 0C12.312 0 0 12.312 0 27.5S12.312 55 27.5 55 55 42.688 55 27.5 42.688 0 27.5 0zm11.476 37.072l-1.486 1.426-9.99-9.574-9.987 9.574-1.488-1.426 9.988-9.573-9.987-9.573 1.487-1.425 9.987 9.573 9.988-9.573 1.487 1.425-9.989 9.574 9.99 9.572z"/>
-      </svg>
+      <button class="map-modal-close" type="button">Закрыть
+        <svg class="map-modal-close" xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 55 55">
+          <path fill="#F0C52E" d="M27.5 0C12.312 0 0 12.312 0 27.5S12.312 55 27.5 55 55 42.688 55 27.5 42.688 0 27.5 0zm11.476 37.072l-1.486 1.426-9.99-9.574-9.987 9.574-1.488-1.426 9.988-9.573-9.987-9.573 1.487-1.425 9.987 9.573 9.988-9.573 1.487 1.425-9.989 9.574 9.99 9.572z"/>
+        </svg>
+      </button>
     </section>
+    <script src="js/script.min.js"></script>
   </body>
 </html>
