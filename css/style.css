@@ -691,10 +691,13 @@ img {
 }
 
 .checkbox:checked ~ .color::before,
-.checkbox:not(:checked):active ~ .color::before,
-.checkbox:checked:active ~ .color::after,
 .checkbox:not(:checked) ~ .color::after {
   display: block;
+}
+
+.checkbox:checked:active ~ .color::after,
+.checkbox:not(:checked):active ~ .color::before {
+  display: none;
 }
 
 .checkbox:checked:hover ~ .color::before,
@@ -844,9 +847,9 @@ img {
   left: 0;
 }
 
-.catalog-item-photo:hover ~ .item-menu,
-.catalog-item-photo:focus ~ .item-menu,
-.catalog-item-photo:active ~ .item-menu {
+.catalog-item:hover .item-menu,
+.catalog-item:focus .item-menu,
+.catalog-item:active .item-menu {
   display: block;
   position: absolute;
   top: 0;
@@ -1298,7 +1301,7 @@ img {
 }
 
 .modal-map {
-  display: block;
+  display: none;
   height: 560px;
   width: 960px;
   position: fixed;
