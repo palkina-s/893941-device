@@ -17,8 +17,8 @@
         <ul class="user-navigation">
           <li class="search">
             <form class="search-form" method="post" action="https://echo.htmlacademy.ru" aria-label="Форма поиска">
-              <input class="site-search" type="search" name="search" placeholder="Поиск по сайту">
-              <input type="submit" class="search-find" value="Найти">
+              <input class="site-search" type="search" name="search" placeholder="Поиск по сайту" aria-label="Ввести запрос">
+              <input type="submit" class="search-find" value="Найти" aria-label="Найти">
             </form>
           </li>
           <li class="login-link">
@@ -70,9 +70,9 @@
         </ul>
       </nav>
     </header>
+
     <main class="main-content">
       <h1 class="visually-hidden">Магазин Девайс</h1>
-
       <section class="slider container">
           <input class="slider-radio-1" type="radio" id="button-1" name="slider-toggle" checked>
           <input class="slider-radio-2" type="radio" id="button-2" name="slider-toggle">
@@ -278,7 +278,8 @@
         </ul>
       </section>
 
-      <section class="services container">
+      <section class="services">
+        <div class="container">
           <input type="radio" class="services-radio-1" id="services-radio-1" name="services-toggle" checked>
           <input type="radio" class="services-radio-2" id="services-radio-2" name="services-toggle">
           <input type="radio" class="services-radio-3" id="services-radio-3" name="services-toggle">
@@ -314,6 +315,7 @@
               <img class="services-icon" src="img/credit.svg" width="156" height="186" alt="Человек с кредитной картой">
             </li>
           </ul>
+        </div>
       </section>
 
       <section class="partners container">
@@ -361,8 +363,8 @@
       </section>
 
     </main>
-    <footer class="main-footer container">
-        <nav class="footer-container">
+    <footer class="main-footer">
+        <nav class="footer-container container">
           <div class="footer-first-line">
             <a href="index.html" aria-label="Магазин Девайс">
               <span class="visually-hidden">Магазин Девайс</span>

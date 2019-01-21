@@ -71,7 +71,7 @@
       </ul>
     </nav>
   </header>
-    <main class="main-content container">
+    <main class="main-content">
       <div class="container">
         <h1 class="page-title">Моноподы для селфи</h1>
         <ul class="breadcrumps-list">
@@ -81,33 +81,38 @@
         </ul>
       </div>
 
-      <div class="sorting-wrapper container">
-        <h3 class="filter-title">Фильтр:</h3>
+      <div class="sorting-wrapper">
+        <div class="container">
           <div class="sorting">
-             <h3 class="sorting-title">Сортировка:</h3>
-             <ul class="sorting-options-list">
-                <li><a class="sorting-options-current" href="#">По цене</a></li>
-                <li><a class="sorting-options" href="#">По типу</a></li>
-                <li><a class="sorting-options" href="#">По популярности</a></li>
-             </ul>
-             <div class="sorting-direction">
-                 <a class="sorting-up" href="#"><span class="visually-hidden">По возрастанию</span></a>
-                 <a class="sorting-down sorting-direction-current" href="#"><span class="visually-hidden">По убыванию</span></a>
+              <h3 class="filter-title">Фильтр:</h3>
+              <div class="sorting-section">
+               <h3 class="sorting-title">Сортировка:</h3>
+               <ul class="sorting-options-list">
+                  <li><a class="sorting-options-current" href="#">По цене</a></li>
+                  <li><a class="sorting-options" href="#">По типу</a></li>
+                  <li><a class="sorting-options" href="#">По популярности</a></li>
+               </ul>
+               <div class="sorting-direction">
+                   <a class="sorting-up" href="#"><span class="visually-hidden">По возрастанию</span></a>
+                   <a class="sorting-down sorting-direction-current" href="#"><span class="visually-hidden">По убыванию</span></a>
+               </div>
              </div>
-           </div>
-       </div>
-     <div class="catalog-columns container">
-      <section class="filters">
-          <h2 class="visually-hidden">Фильтр товаров</h2>
-          <form method="post" action="https://echo.htmlacademy.ru">
+          </div>
+        </div>
+      </div>
 
-            <fieldset class="fieldset">
-              <legend class="price-range">Стоимость</legend>
-               <div class="price-range-filter">
-                 <div class="range-controls">
-                   <div class="scale">
-                     <div class="bar">
-                       <label class="bar-from">от <input class="bar-from-value" name="min-price" type="text" value="0"></label>
+     <div class="catalog-columns">
+       <div class="container">
+         <section class="filters">
+           <h2 class="visually-hidden">Фильтр товаров</h2>
+           <form method="post" action="https://echo.htmlacademy.ru">
+              <fieldset class="fieldset">
+                <legend class="price-range">Стоимость</legend>
+                 <div class="price-range-filter">
+                   <div class="range-controls">
+                     <div class="scale">
+                       <div class="bar">
+                         <label class="bar-from">от <input class="bar-from-value" name="min-price" type="text" value="0"></label>
                      	 <label class="bar-to">до <input class="bar-to-value" name="max-price" type="text" value="5000"></label>
                      </div>
                    </div>
@@ -237,10 +242,11 @@
           </div>
         </section>
       </div>
+     </div>
     </main>
 
-    <footer class="main-footer container">
-      <nav class="footer-container">
+    <footer class="main-footer">
+      <nav class="footer-container container">
         <div class="footer-first-line">
           <a href="index.html" aria-label="Магазин Девайс">
             <span class="visually-hidden">Магазин Девайс</span>

@@ -45,7 +45,6 @@
 
 body,
 body .inner-page {
-  min-width: 960px;
   padding: 0;
   margin: 0;
 
@@ -78,10 +77,11 @@ img {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
 .container {
 	width: 1160px;
 	margin: 0 auto;
-	padding: 0;
+	padding: 0 20px;
 }
 
 .button {
@@ -409,8 +409,7 @@ img {
   padding-bottom: 34px;
   padding-top: 25px;
   width: 1160px;
-  max-height: 130px;
-  z-index: 1;
+  z-index: 100;
 }
 
 .top-menu-catalog:hover .menu-catalog-list {
@@ -477,6 +476,7 @@ img {
 
 .slider {
   margin: 0 auto;
+  padding: 0;
   position: relative;
   margin-top: -17px;
   height: 520px;
@@ -575,7 +575,7 @@ img {
 }
 .slider-three::after {
   content: '03';
-  right: -3px;
+  right: -60px;
   top: -9px;
   letter-spacing: 0.015em;
 }
@@ -754,10 +754,7 @@ img {
   letter-spacing: 0.015em;
   z-index: 1;
 }
-.slider-three .slider-headline::before {
-  top: 42px;
-  right: 410px;
-}
+
 .slider-three .slider-description {
   margin-top: -20px;
   margin-left: 42px;
@@ -774,12 +771,13 @@ img {
   margin-left: 2px;
 }
 .slider-three .feature-value {
-    margin-bottom: 8px;
+  margin-bottom: 8px;
 }
 /* Популярное */
-
+.popular {
+  padding: 0;
+}
 .popular-list {
-  width: 1160px;
   padding: 0;
   margin-bottom: 82px;
 
@@ -827,18 +825,22 @@ img {
 }
 
 /* Сервисы */
+.services {
+  width: auto;
+  margin: 0 auto;
+  background-image: linear-gradient(#ffffff 100px, #e5e5e5 100px);
+}
 
-.services.container {
-  width: 1425px;
+.services .container {
   padding: 0;
   margin: 0 auto;
   min-height: 386px;
-  background-image: linear-gradient(transparent 98px, #e5e5e5 98px);
   display: flex;
   flex-direction: row;
 
   position: relative;
 }
+
 .services-radio-1,
 .services-radio-2,
 .services-radio-3 {
@@ -848,7 +850,6 @@ img {
 .services-controls {
   display: flex;
   flex-direction: column;
-  margin-left: 140px;
   margin-top: 56px;
   position: relative;
 }
@@ -858,7 +859,7 @@ img {
   width: 7px;
   height: 319px;
 
-  background-color: #000;
+  background-color: #000000;
 
   position: absolute;
   top: -56px;
@@ -884,6 +885,7 @@ img {
 
   background-image: linear-gradient(transparent 16px, #f0c52e 16px, #f0c52e 24px, transparent 24px);
 }
+
 .services-button {
   margin-top: 25px;
   margin-left: -2px;
@@ -939,16 +941,16 @@ img {
 
 .services-icon {
   position: absolute;
-  left: 1099px;
+  right: 65px;
   top: 83px;
 }
 .services-slide-2 .services-icon {
-  left: 1084px;
-  top: 59px;
+  top: 60px;
+  right: 46px;
 }
 .services-slide-3 .services-icon {
-  left: 1074px;
-  top: 59px;
+  top: 61px;
+  right: 69px;
 }
 
 .services-radio-1:checked ~ .services-slider .services-slide-1,
@@ -1106,10 +1108,6 @@ img {
 
 /* Каталог моноподов */
 
-.inner-page .main-content {
-  width: 1425px;
-  margin: 0 auto;
-}
 .inner-page .main-header {
   margin-bottom: 38px;
 }
@@ -1125,8 +1123,8 @@ img {
   margin-bottom: 23px;
 }
 .breadcrumps-list {
-  margin-left: -28px;
   margin-bottom: 24px;
+  padding-left: 60px;
 }
 .breadcrumps a,
 .breadcrumps-current a {
@@ -1150,9 +1148,6 @@ img {
   letter-spacing: 0.015em;
 }
 
-.breadcrumps:first-child {
-  margin-left: 49px;
-}
 .breadcrumps:nth-child(2) {
   margin-right: 33px;
 }
@@ -1180,43 +1175,61 @@ img {
 }
 
 .sorting-wrapper {
-  width: 1425px;
   margin: 0 auto;
   height: 70px;
   display: flex;
-  background-image: linear-gradient(to right, #dcdcdc 463px, #ebebeb 463px);
+
+  background-image: linear-gradient(to right, #dcdcdc 50%, #ebebeb 50%);
 }
 
 .filter-title {
-  width: 480px;
+  width: 267px;
+  padding: 0;
   font-family: 'gilroyextrabold', Helvetica, sans-serif;
   font-size: 16px;
   line-height: 38px;
   text-transform: uppercase;
   letter-spacing: 0.22em;
-  text-align: center;
-  padding: 0;
+  text-align: left;
+
+  background-color: #dcdcdc;
+
+}
+.sorting-wrapper .container {
+  display: flex;
 }
 .sorting {
   display: flex;
-  width: 957px;
+
+  padding-left: 62px;
+}
+.sorting-section {
+  display: flex;
+  width: 800px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-left: 74px;
+  background-color: #ebebeb;
 }
 .sorting-title {
   font-family: 'gilroyextrabold', Helvetica, sans-serif;
   font-size: 16px;
-  line-height: 38px;
+  line-height: 13px;
   text-transform: uppercase;
   letter-spacing: 0.22em;
   text-align: center;
-  padding: 0 59px;
+
+  background-color: #ebebeb;
 }
 .sorting-options-list {
-  margin-left: -48px;
+  margin-left: 10px;
+  width: 517px;
+
   display: -ms-flexbox;
   display: flex;
   font-family: 'Open Sans', Arial, sans-serif;
   font-size: 14px;
-  line-height: 39px;
+  line-height: 13px;
   font-weight: 300;
   text-decoration: none;
   color: #000000;
@@ -1236,8 +1249,8 @@ img {
 }
 
 .sorting-direction {
-  margin-left: 202px;
-  margin-top: 30px;
+  margin-top: 15px;
+  width: 85px;
 
   font-size: 0px;
 }
@@ -1257,11 +1270,10 @@ img {
 .sorting-direction .sorting-down {
   background-image: url('../img/icon-down-dir.png');
 }
-
 .catalog-columns {
-  background-color: #ffffff;
-  padding: 0;
-  margin: 0;
+  background-image: linear-gradient(to right, #efefef 50%, #ffffff 50%);
+}
+.catalog-columns .container {
   display: flex;
   justify-content: space-between;
 }
@@ -1269,9 +1281,8 @@ img {
 .filters {
   padding-top: 84px;
   margin: 0;
-  padding-left: 193px;
   padding-right: 4px;
-
+  padding-left: 60px;
   background-color: #efefef;
 }
 
@@ -1545,14 +1556,15 @@ img {
 
 .items {
   width: 973px;
-  margin-left: 73px;
-  margin-top: 68px;
+  padding-left: 71px;
+  padding-top: 68px;
+  background-color: #ffffff;
 }
 
 .catalog-list {
   padding: 0;
   margin: 0;
-  margin-bottom: 37px;
+  margin-bottom: 39px;
   width: 760px;
   display: flex;
   flex-wrap: wrap;
@@ -1578,7 +1590,7 @@ img {
   padding: 0;
   margin: 0;
 
-  margin-bottom: 35px;
+  margin-bottom: 37px;
   position: relative;
 }
 
@@ -1786,9 +1798,8 @@ img {
 }
 /* Подвал */
 
-.main-footer.container {
-  width: 1425px;
-  padding: 0;
+.main-footer {
+  padding: 0 20px;
   margin: 0 auto;
   font-family: 'Open Sans', Arial, sans-serif;
   font-weight: 300;
@@ -1940,6 +1951,7 @@ img {
 
   display: -ms-flexbox;
   display: flex;
+  flex-wrap: wrap-reverse;
   flex-direction: row;
   -ms-flex-pack: center;
   justify-content: space-between;
@@ -1992,6 +2004,7 @@ img {
 
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   min-width: 160px;
   justify-content: space-around;
 }
